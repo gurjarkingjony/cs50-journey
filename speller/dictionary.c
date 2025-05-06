@@ -1,102 +1,101 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <ctype.h>
 #include <stdbool.h>
+
 #include "dictionary.h"
 
-#define N 10000
-
-// Node structure
 typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
 } node;
 
+
+const unsigned int N = 26;
+
+// TODO: Number of words in dictionary
+int num = 0;
+
 // Hash table
 node *table[N];
 
-// Word count
-unsigned int word_count = 0;
-
-// Hash function
-unsigned int hash(const char *word)
+// Returns true if word is in dictionary, else false
+bool check(const char *word)
 {
-    unsigned long hash = 5381;
-    int c;
-
-    while ((c = *word++))
-        hash = ((hash << 5) + hash) + tolower(c);
-
-    return hash % N;
+    // TODO
+    int index = hash(word);
+    node *tmp = table[index];
+    while (tmp)
+    {
+        if (!(strcasecmp(tmp->word, word)))
+            return true;
+        tmp = tmp->next;
+    }
+    return false;
 }
 
-// Load dictionary
+// Hashes word to a number
+unsigned int hash(const char *word)
+{
+    // TODO: Improve this hash function
+    return toupper(word[0]) - 'A';
+}
+
+void init(const char *dictionary)
+{
+    int i = 0;
+    while (i < N)
+    {
+        table[i] = NULL;
+        i++;
+    }
+}
+// Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    FILE *file = fopen(dictionary, "r");
-    if (!file)
+    // TODO
+    init(dictionary);
+    FILE *file;
+    if (!(file = fopen(dictionary, "r")))
         return false;
-
     char word[LENGTH + 1];
-
-    while (fscanf(file, "%45s", word) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
-        node *n = malloc(sizeof(node));
-        if (!n)
+        node *lklma = malloc(sizeof(node));
+        if (!lklma)
             return false;
-
-        strcpy(n->word, word);
-        int h = hash(word);
-        n->next = table[h];
-        table[h] = n;
-        word_count++;
+        int index = hash(word);
+        strcpy(lklma->word, word);
+        lklma->next = table[index];
+        table[index] = lklma;
+        num++;
     }
-
     fclose(file);
     return true;
 }
 
-// Check if word is in dictionary
-bool check(const char *word)
-{
-    char temp[LENGTH + 1];
-    int len = strlen(word);
-
-    for (int i = 0; i < len; i++)
-        temp[i] = tolower(word[i]);
-
-    temp[len] = '\0';
-
-    int h = hash(temp);
-    for (node *n = table[h]; n != NULL; n = n->next)
-    {
-        if (strcasecmp(n->word, temp) == 0)
-            return true;
-    }
-
-    return false;
-}
-
-// Number of words
+// Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    return word_count;
+    // TODO
+    return num;
 }
 
-// Free memory
+// Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    for (int i = 0; i < N; i++)
+    // TODO
+    int i = 0;
+    while (i < N)
     {
-        node *cursor = table[i];
-        while (cursor)
+        node *tmp = table[i];
+        node *cur = table[i];
+        while (cur)
         {
-            node *temp = cursor;
-            cursor = cursor->next;
-            free(temp);
+            cur = cur->next;
+            free(tmp);
+            tmp = cur;
         }
+        i++;
     }
     return true;
 }

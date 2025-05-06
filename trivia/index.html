@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.mcq-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const feedback = document.getElementById('mcq-feedback');
+                    if (button.classList.contains('correct')) {
+                        feedback.textContent = 'Correct!';
+                        feedback.style.color = 'green';
+                        button.style.backgroundColor = 'lightgreen';
+                    } else {
+                        feedback.textContent = 'Incorrect';
+                        feedback.style.color = 'red';
+                        button.style.backgroundColor = 'lightcoral';
+                    }
+                    document.querySelectorAll('.mcq-btn').forEach(b => b.disabled = true);
+                });
+            });
+            document.getElementById('check-answer').addEventListener('click', function () {
+                const input = document.getElementById('free-response').value.trim().toLowerCase();
+                const feedback = document.getElementById('fr-feedback');
+                if (input === 'paris') {
+                    feedback.textContent = 'Correct!';
+                    feedback.style.color = 'green';
+                } else {
+                    feedback.textContent = 'Incorrect';
+                    feedback.style.color = 'red';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <p>Which of these is the largest planet in our solar system?</p>
+            <button class="mcq-btn">Earth</button>
+            <button class="mcq-btn">Mars</button>
+            <button class="mcq-btn correct">Jupiter</button>
+            <p id="mcq-feedback"></p>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <p>What is the capital of France?</p>
+            <input type="text" id="free-response" placeholder="Enter your answer here">
+            <button id="check-answer">Check Answer</button>
+            <p id="fr-feedback"></p>
+        </div>
+    </div>
+</body>
+</html>

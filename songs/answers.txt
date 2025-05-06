@@ -1,0 +1,3 @@
+In this problem set, I learned how to use SQL to filter, sort, and analyze data.
+I practiced writing queries with SELECT, WHERE, and ORDER BY, and learned how to interpret a schema and write conditions based on multiple fields.
+It was especially helpful to understand how different musical characteristics like tempo, energy, and valence can be filtered using SQL queries.
