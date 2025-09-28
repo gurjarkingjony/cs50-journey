@@ -6,7 +6,6 @@ int main(void)
 {
     long cc;
 
-    // Prompt user for credit card number
     do
     {
         cc = get_long("Enter credit card number: ");
@@ -19,7 +18,6 @@ int main(void)
     int digit;
     bool is_second = false;
 
-    // Apply Luhn's algorithm
     while (cc > 0)
     {
         digit = cc % 10;
@@ -37,14 +35,12 @@ int main(void)
         count++;
     }
 
-    // Get the first two digits for card type check
     long start = ccNUM;
     while (start >= 100)
     {
         start /= 10;
     }
 
-    // Determine card type based on length and starting digits
     if (sum % 10 == 0)
     {
         if ((start / 10 == 4) && (count == 13 || count == 16))
