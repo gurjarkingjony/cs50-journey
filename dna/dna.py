@@ -36,16 +36,12 @@ def main():
     database_filename = sys.argv[1]
     sequence_filename = sys.argv[2]
 
-    # Load database and STR names
     database, str_names = load_database(database_filename)
 
-    # Load DNA sequence
     sequence = load_dna_sequence(sequence_filename)
 
-    # Find STR counts
     str_counts = {str_name: longest_match(sequence, str_name) for str_name in str_names}
 
-    # Find match
     match = find_matching_profile(database, str_counts, str_names)
     print(match)
 
