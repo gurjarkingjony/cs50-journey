@@ -9,3 +9,4 @@ How do you know?: Is the fastest among all.
 sort3 uses: Selection Sort
 
 How do you know?: Takes lot of time even when running on sorted text compared to sort1
+
