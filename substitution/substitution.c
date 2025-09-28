@@ -1,22 +1,21 @@
 #include <stdio.h>
-#include <cs50.h> // to get plain text
-#include <string.h> // for strlen()
-#include <ctype.h> // for string operation upper, lower
+#include <cs50.h>
+#include <string.h>
+#include <ctype.h>
 
-void alpha_arr_val(char pos, string key) // passing p[i] and upper/lower(alpha array)
-{
-    string alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // alphabet array
+void alpha_arr_val(char pos, string key)
+    string alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    for (int i = 0; i < strlen(alpha); i++) // accessing each element in alpha array
+    for (int i = 0; i < strlen(alpha); i++)
     {
-        if (islower(pos)) // p[i] is lower
+        if (islower(pos))
         {
             if (pos == tolower(alpha[i]))
             {
                 printf("%c", tolower(key[i]));
             }
         }
-        else // for UPPERCASE // p[i] is upper
+        else
         {
             if (pos == toupper(alpha[i]))
             {
@@ -35,23 +34,23 @@ void Do_substitute(string key)
 
     for (int i = 0; i < strlen(p); i++)
     {
-        if (isalpha(p[i])) // checking p[i] is alphabet
+        if (isalpha(p[i]))
         {
             char x = p[i];
             if (islower(p[i]))
             {
-                alpha_arr_val(tolower(x), key); // passing p[i] in lower-case
+                alpha_arr_val(tolower(x), key);
             }
             else
             {
-                alpha_arr_val(toupper(x), key); // passing p[i] in UPPER-CASE
+                alpha_arr_val(toupper(x), key);
             }
 
 
         }
         else
         {
-            printf("%c", p[i]); // print the element as it is (such as space | , | special characters | ? | etc...)
+            printf("%c", p[i]);
         }
     }
 
