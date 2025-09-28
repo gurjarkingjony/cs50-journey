@@ -32,5 +32,4 @@ def main():
 
     print(grade)
 
-# Run the program
 main()
