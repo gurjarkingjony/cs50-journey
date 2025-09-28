@@ -9,16 +9,13 @@ def get_height():
 
 def print_pyramid(height):
     for row in range(1, height + 1):
-        # Left pyramid
+
         left = "#" * row
         left = left.rjust(height)
 
-        # Right pyramid
         right = "#" * row
 
-        # Combine with gap
         print(f"{left}  {right}")
 
-# Run the program
 height = get_height()
 print_pyramid(height)
