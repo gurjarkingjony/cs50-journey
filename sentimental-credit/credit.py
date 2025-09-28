@@ -38,7 +38,6 @@ def get_card_type(card_number):
     else:
         return "INVALID"
 
-# Run the program
 card_number = get_card_number()
 card_type = get_card_type(card_number)
 print(card_type)
