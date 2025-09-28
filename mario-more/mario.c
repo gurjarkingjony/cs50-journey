@@ -12,19 +12,15 @@ int main(void)
 
     for (int row = 0; row < height; row++)
     {
-        // Print spaces
         for (int spaces = height - row - 1; spaces > 0; spaces--)
         {
             printf(" ");
         }
-        // Print hashes for the first pyramid
         for (int hashes = 0; hashes <= row; hashes++)
         {
             printf("#");
         }
-        // Print spaces between the pyramids
         printf("  ");
-        // Print hashes for the second pyramid
         for (int hashes = 0; hashes <= row; hashes++)
         {
             printf("#");
