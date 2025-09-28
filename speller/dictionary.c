@@ -12,13 +12,10 @@ typedef struct node
 
 const unsigned int N = 26;
 
-// TODO: Number of words in dictionary
 int num = 0;
 
-// Hash table
 node *table[N];
 
-// Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
     // TODO
@@ -33,10 +30,8 @@ bool check(const char *word)
     return false;
 }
 
-// Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
 }
 
