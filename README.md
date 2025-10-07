@@ -2,6 +2,8 @@
 
 <a href="https://ibb.co/4Z4XDF8N"><img src="https://i.ibb.co/VWMzhLgB/CS50x.png" alt="CS50x" border="0" /></a>
 
+[url=https://ibb.co/4Z4XDF8N][img]https://i.ibb.co/VWMzhLgB/CS50x.png[/img][/url]
+
 [![CS50 Certificate](https://img.shields.io/badge/CS50-Certificate-blue)](https://cs50.harvard.edu/x/)
 
 ## 📖 Description  
